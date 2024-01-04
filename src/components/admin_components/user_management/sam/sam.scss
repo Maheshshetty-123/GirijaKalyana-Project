@@ -1,0 +1,61 @@
+.container {
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  .top-section {
+    margin-bottom: 20px;
+  }
+  
+  select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    cursor: pointer;
+  }
+  
+  select:hover {
+    background-color: #e0e0e0;
+  }
+  
+  select:focus {
+    outline: none;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    cursor: pointer;
+  }
+  
+  button:hover, button.active {
+    background-color: #e0e0e0;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  

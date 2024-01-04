@@ -1,0 +1,114 @@
+.dashboard-content-main {
+  // border-top: 1px solid rgb(217, 210, 210);
+  position: relative;
+  top: 0px;
+  // width:100vw;
+  // padding-top: 30px;
+  // background-color: #eeeded;
+  .card-div {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    // width:150px;
+
+    .main-div {
+      background-color: rgb(255, 255, 255);
+      margin: 10px 0px 10px 10px;
+      width: 220px;
+      border-bottom: 1px solid rgb(196, 190, 190);
+      border-radius: 5px;
+
+      .left-div {
+        display: flex;
+        padding: 20px;
+        .heading-div {
+          h1 {
+            width: 120px;
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+        }
+      }
+      .right-div {
+        margin-left: 15px;
+      }
+
+      .view-all-div {
+        // width: 100%;
+        height: 50px;
+        border-top: 1px solid rgb(187, 183, 183);
+        text-align: center;
+        padding: 10px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+//bottom portion
+
+.dash-board-bottom {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  width: 350px;
+
+  .dash-board-bottom-main {
+    background-color: white;
+    margin: 10px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    width: 335px;
+
+    .heading-div {
+      p {
+        color: #252328;
+        height: 35px;
+        font-size: 1rem;
+        padding-left: 20px;
+        font-weight: 450px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .list-div {
+      // width: 300px;
+      background: #f3f3f3;
+      padding: 20px;
+      line-height: 2;
+      font-size: 14px;
+      color: #252328;
+      font-weight: 500;
+      line-height: 10px;
+
+      p {
+        box-sizing: border-box;
+      }
+    }
+    .data-fetching {
+      overflow-y: scroll;
+      height: 340px;
+      padding: 10px;
+      margin: 20px 0;
+
+      .data-div {
+        line-height: 2;
+        position: relative;
+        right: 22px;
+
+        ul {
+          border-bottom: 1px solid #eae9e9;
+          list-style: none;
+          li {
+            color: #6f6d72;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

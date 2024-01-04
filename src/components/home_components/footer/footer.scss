@@ -1,0 +1,91 @@
+
+// footer page
+
+.footer-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    background-color: #ed7014;
+  
+    div {
+      width: 300px;
+      padding: 70px 0;
+      height: 460px;
+      color: white;
+      margin-left: 20px;
+    }
+  
+    .footer-sub-div1 {
+      p {
+        padding-top: 20px;
+      }
+    }
+  
+    .footer-sub-div2 {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+  
+      p {
+        font-size: 19px;
+      }
+  
+      a {
+        padding: 10px 0;
+        border-bottom: 1px dotted black;
+        width: 200px;
+      }
+    }
+  
+    .footer-sub-div3 {
+      padding-left: 20px;
+      p {
+        font-size: 19px;
+      }
+  
+      a {
+        font-size: 14px;
+      }
+  
+      i {
+        color: #f8cd35;
+      }
+    }
+  
+    .footer-sub-div4 {
+      width: 500px;
+      padding-left: 20px;
+  
+      p {
+        font-size: 15px;
+      }
+  
+      input {
+        height: 43px;
+        width: 200px;
+        border: none;
+        margin-top: 10px;
+        padding: 5px;
+      }
+  
+      button {
+        margin-top: 20px;
+        width: 110px;
+        height: 38px;
+        border-radius: 5px;
+        background-color: #f8cd35;
+        border: none;
+        font-size: 13px;
+      }
+    }
+  }
+  
+  .foot-last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 62px;
+    background-color: #f8cd35;
+  }
+  

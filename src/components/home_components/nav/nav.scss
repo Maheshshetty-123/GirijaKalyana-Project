@@ -1,0 +1,41 @@
+//nav bar design
+
+.div-nav {
+    background-color: #ed7014;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    border-bottom: 2px solid #f8cd35;
+  
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      margin-left: 30px;
+      height: 70px;
+  
+      // .home-btn {
+      //   background-color: white;
+      //   height: 20px;
+      //   border-radius: 40px;
+      //   color: #ed7014;
+      //   cursor: pointer;
+      //   text-decoration: none;
+      // }
+      a {
+        display: flex;
+        align-items: center;
+        padding: 18px;
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+        &:hover{
+          background-color: white;
+       color: #ed7014;
+      height: 20px;
+      border-radius: 40px;
+        }
+      }
+    }
+  }
+  

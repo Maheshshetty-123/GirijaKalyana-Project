@@ -1,0 +1,168 @@
+//admin login page
+.main-admin-div {
+  .div1 {
+    position: relative;
+    top: 71px;
+    background-color: #ebebeb;
+    height: 100%;
+    .content {
+      position: relative;
+      left: 270px;
+      width: 70%;
+    }
+  }
+}
+
+//AdminLogoutPage
+
+.logout-main-div {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .logout-sec-div {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ebebeb;
+  }
+
+  .logout1 {
+    font-size: 20px;
+    line-height: 28px;
+    color: #252328;
+    padding: 20px;
+  }
+
+  .logout2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 100px;
+
+    p {
+      color: #626262;
+    }
+
+    button {
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+      height: 50px;
+      font-weight: 500;
+      background-color: #ff4d4d;
+      border: none;
+    }
+  }
+}
+
+// setting popup page
+
+.main-div-popup {
+  .popup-head {
+    background-color: #ff4d4d;
+
+    .popup-tittle {
+      color: white;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .popup-body {
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        margin: 10px 0;
+        padding: 8px;
+        border: 1px solid #ebebeb;
+      }
+    }
+
+    // profile popup page
+    .profile-div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      div {
+        img {
+          position: relative;
+          bottom: 25px;
+          left: 10px;
+          width: 200px;
+          height: 280px;
+        }
+        img:hover {
+          transform: scale(1.1);
+        }
+      }
+      .file-div {
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        button {
+          margin: 10px;
+          font-size: 13px;
+          height: 50px;
+          font-weight: 400;
+          padding: 10px 20px;
+          border-radius: 2px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          position: relative;
+          left: 85px;
+          top: 255px;
+        }
+
+        input {
+          position: relative;
+          left: 70px;
+          top: 10px;
+        }
+        #submit-btn {
+          color: #fff;
+          background-color: #28a745;
+          border-color: #28a745;
+        }
+        #close-btn {
+          color: #fff;
+          background-color: #ff4d4d;
+          border-color: #ff4d4d;
+        }
+      }
+    }
+
+    // profile popup page end
+  }
+  .popup-footer {
+    button {
+      font-size: 13px;
+      height: 50px;
+      font-weight: 400;
+      padding: 10px 20px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    #submit-btn {
+      color: #fff;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+    #close-btn {
+      color: #fff;
+      background-color: #ff4d4d;
+      border-color: #ff4d4d;
+    }
+  }
+}

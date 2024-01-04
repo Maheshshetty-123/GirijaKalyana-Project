@@ -1,0 +1,31 @@
+//Headerpage  design
+
+.head-div {
+    display: flex;
+    justify-content: space-between;
+    background-color: #713204;
+    height: 50px;
+    color: white;
+  
+    .left-head {
+      padding: 9px 0 0 30px;
+      font-size: 12px;
+  
+      p {
+        word-spacing: 10px;
+      }
+    }
+  
+    .right-head {
+      margin-top: 5px;
+      padding-right: 40px;
+  
+      a {
+        color: white;
+        align-items: center;
+        padding: 4px 8px 0 20px;
+      }
+    }
+  }
+  
+  

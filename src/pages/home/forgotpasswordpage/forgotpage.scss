@@ -1,0 +1,44 @@
+
+.forgot-password {
+    background-image: url("../../../images//back-ground.jpg");
+    // background-color: green;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    form {
+      background-color: #fffff9;
+      height: 230px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 350 wheat;
+      padding: 20px;
+  
+      h2 {
+        padding: 10px;
+     
+      }
+      input {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #e6e6e3;
+      }
+      button {
+        width: 100px;
+        height: 35px;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        margin:10px;
+        background-color: #ed7014;
+        color: white;
+        border: none;
+        text-transform: uppercase;
+  
+      }
+    }
+  }
+  
