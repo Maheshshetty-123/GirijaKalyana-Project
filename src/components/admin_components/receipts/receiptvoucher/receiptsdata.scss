@@ -1,0 +1,50 @@
+.user{
+.card-div {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+
+    .main-div {
+      background-color: rgb(255, 255, 255);
+      margin: 10px 0px 10px 10px;
+      width: 160px;
+      border-radius: 5px;
+
+      .left-div {
+        display: flex;
+        height: 180px;
+        padding:50px 20px;
+        .heading-div {
+          h1 {
+            width: 120px;
+            font-size: 2rem;
+            font-weight: bold;
+          }
+          p{
+            color: #6f6d72;font-size: 16px;
+            line-height: 26px;
+          }
+        }
+      }
+      .right-div {
+        .icons-class{
+        font-size: 35px;
+        color: #ED7014;
+        position: relative;
+        left: -50px;
+        }
+      }
+
+      .view-all-div {
+        border-top: 1px solid rgb(187, 183, 183);
+        text-align: center;
+        padding: 10px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}

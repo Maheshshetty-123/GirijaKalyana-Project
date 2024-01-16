@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
+import ReceiptsReportsData from '../../../components/admin_components/reports/receiptsreports/ReceiptsReportsdata';
 
 const ReceiptsReportPage = () => {
   return (
@@ -12,8 +13,8 @@ const ReceiptsReportPage = () => {
      <div className="left-side"> 
      <Sidebar/>
      </div>
-      <div className="content">
-         <h1>ReceiptsReportPage content</h1>
+      <div className="side-content">
+         <ReceiptsReportsData/>
        </div>
     </div>
   </div>

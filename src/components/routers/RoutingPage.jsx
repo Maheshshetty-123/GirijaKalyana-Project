@@ -26,6 +26,7 @@ import NotificationPage from "../../pages/admin/notification/NotificationPage";
 import AboutUsPage from "../../pages/home/aboutus/AboutUsPage";
 import PrivacyPolicyPage from "../../pages/home/privacypolicy/PrivacyPolicyPage";
 import ContactUsPage from "../../pages/home/contactus/ContactUsPage";
+import ReceiptsReportPage from "../../pages/admin/reports/ReceiptsReportPage";
 
 const RoutingPage = () => {
   return (
@@ -58,7 +59,7 @@ const RoutingPage = () => {
             <Route path="assistencepending" element={<PendingPage />} />
             <Route path="assistencesuccess" element={<SuccessPage />} />
             <Route
-              path="assistencepromotersusers"
+              path="promotersusers"
               element={<PromotersUsersPage />}
             />
 
@@ -79,7 +80,7 @@ const RoutingPage = () => {
             {/* reports pages navigation */}
             <Route path="usersreports" element={<UsersReportPage/>} />
             <Route path="renewalsreports" element={<RenewalsReportPage/>} />
-            <Route path="receiptsreports" element={<ReceiptVoucherPage/>} />
+            <Route path="receiptsreports" element={<ReceiptsReportPage/>} />
             
 
             {/* notification navigation */}

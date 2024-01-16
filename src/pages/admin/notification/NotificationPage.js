@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
+import NotificationData from '../../../components/admin_components/notification/NotificationData';
 
 const NotificationPage = () => {
   return (
@@ -13,7 +14,7 @@ const NotificationPage = () => {
      <Sidebar/>
      </div>
       <div className="content">
-         <h1>NotificationPage content</h1>
+         <NotificationData/>
        </div>
     </div>
   </div>

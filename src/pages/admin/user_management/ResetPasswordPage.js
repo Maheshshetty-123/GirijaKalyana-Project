@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
+import ResetPasswordData from '../../../components/admin_components/user_management/resetpassworddata/ResetPasswordData';
 
 const ResetPasswordPage = () => {
   return (
@@ -12,8 +13,8 @@ const ResetPasswordPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="content">
-           <h1>ResetPasswordPage content</h1>
+        <div className="side-content">
+          <ResetPasswordData/>
          </div>
       </div>
     </div>

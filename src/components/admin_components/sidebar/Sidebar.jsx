@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Nav, Button, Collapse } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,6 @@ import { FaEnvelope } from "react-icons/fa6";
 import { IoIosNotifications } from "react-icons/io";
 import profile from "../../../images/adminprofile.JPG";
 import { Link, useNavigate } from "react-router-dom";
-import DashBoardPage from "../dashboard/DashBoard";
 import "./sidebar.scss";
 
 const Sidebar = () => {
@@ -31,9 +30,11 @@ const Sidebar = () => {
   const showdashboardpage = () => {
     navigate("/admin/dashboard");
   };
-  const shownotification=()=>{
+  const shownotification = () => {
     navigate("/admin/notification");
-  }
+  };
+
+ 
 
   return (
     <div className="multi-button-dashboard">
@@ -60,7 +61,7 @@ const Sidebar = () => {
               position: "relative",
               top: "4px",
             }}
-          />{" "}
+          />
           Dashboard
         </Button>
 
@@ -70,12 +71,13 @@ const Sidebar = () => {
               margin: "0 10px 5px 10px",
               position: "relative",
               top: "4px",
+              color: "#626262",
             }}
-          />{" "}
+          />
           User Managemnet
           <FontAwesomeIcon
             icon={openSections.section1 ? faMinus : faPlus}
-            style={{ marginLeft: "77px", height: "20px" }}
+            className="plus-minus-icon"
           />
         </Button>
         <Collapse in={openSections.section1}>
@@ -96,20 +98,21 @@ const Sidebar = () => {
               margin: "0 10px 5px 10px",
               position: "relative",
               top: "4px",
+              color: "#626262",
             }}
-          />{" "}
+          />
           Assistance Service
           <FontAwesomeIcon
             icon={openSections.section2 ? faMinus : faPlus}
-            style={{ marginLeft: "75px", height: "20px" }}
+            className="plus-minus-icon"
           />
         </Button>
         <Collapse in={openSections.section2}>
           <div>
             <Nav className="flex-column">
-              <Link to="/admin/assistencepending" >Pending</Link>
-              <Link to="/admin/assistencesuccess" >Success</Link>
-              <Link to="/admin/assistencepromotersusers" >Promoter Users</Link>
+              <Link to="/admin/assistencepending">Pending</Link>
+              <Link to="/admin/assistencesuccess">Success</Link>
+              <Link to="/admin/promotersusers">Promoter Users</Link>
             </Nav>
           </div>
         </Collapse>
@@ -120,21 +123,22 @@ const Sidebar = () => {
               margin: "0 10px 5px 10px",
               position: "relative",
               top: "4px",
+              color: "#626262",
             }}
-          />{" "}
+          />
           Promoter Management
           <FontAwesomeIcon
             icon={openSections.section3 ? faMinus : faPlus}
-            style={{ marginLeft: "50px", height: "20px" }}
+            className="plus-minus-icon"
           />
         </Button>
         <Collapse in={openSections.section3}>
           <div>
             <Nav className="flex-column">
-              <Link to="/admin/promoters" >Promoters</Link>
-              <Link to="/admin/promotersusers" >Promoters Users</Link>
-              <Link to="/admin/promotersearnings" >Promoters Earning</Link>
-              <Link to="/admin/paytopromoters" >Pay to Promoters</Link>
+              <Link to="/admin/promoters">Promoters</Link>
+              <Link to="/admin/promotersusers">Promoters Users</Link>
+              <Link to="/admin/promotersearnings">Promoters Earning</Link>
+              <Link to="/admin/paytopromoters">Pay to Promoters</Link>
             </Nav>
           </div>
         </Collapse>
@@ -145,20 +149,23 @@ const Sidebar = () => {
               margin: "0 10px 5px 10px",
               position: "relative",
               top: "4px",
+              color: "#626262",
             }}
-          />{" "}
+          />
           Receipts
           <FontAwesomeIcon
             icon={openSections.section4 ? faMinus : faPlus}
-            style={{ marginLeft: "139px", height: "20px" }}
+            className="plus-minus-icon"
           />
         </Button>
         <Collapse in={openSections.section4}>
           <div>
             <Nav className="flex-column">
-              <Link to="/admin/onlinetransaction" >Online Transaction</Link>
-              <Link to="/admin/assistanceonlinetransaction" >Assistance Online Transaction</Link>
-              <Link to="/admin/receiptvoucher" >Receipt Voucher</Link>
+              <Link to="/admin/onlinetransaction">Online Transaction</Link>
+              <Link to="/admin/assistanceonlinetransaction">
+                Assistance Online Transaction
+              </Link>
+              <Link to="/admin/receiptvoucher">Receipt Voucher</Link>
             </Nav>
           </div>
         </Collapse>
@@ -169,39 +176,41 @@ const Sidebar = () => {
               margin: "0 10px 5px 10px",
               position: "relative",
               top: "4px",
+              color: "#626262",
             }}
-          />{" "}
+          />
           Reports
           <FontAwesomeIcon
             icon={openSections.section5 ? faMinus : faPlus}
-            style={{ marginLeft: "145px", height: "20px" }}
+            className="plus-minus-icon"
           />
         </Button>
         <Collapse in={openSections.section5}>
           <div>
             <Nav className="flex-column">
-              <Link to="/admin/usersreports" >Users </Link>
-              <Link to="/admin/renewalsreports" >Renewals</Link>
-              <Link to="/admin/receiptsreports" >Receipts</Link>
+              <Link to="/admin/usersreports">Users </Link>
+              <Link to="/admin/renewalsreports">Renewals</Link>
+              <Link to="/admin/receiptsreports">Receipts</Link>
             </Nav>
           </div>
         </Collapse>
 
-        <Button className="nati-button" variant="white"  onClick={shownotification}>
+        <Button
+          className="nati-button"
+          variant="white"
+          onClick={shownotification}
+        >
           <IoIosNotifications
             style={{
               margin: "0 10px 5px 10px",
               position: "relative",
               top: "4px",
+              color: "#626262",
             }}
-           
           />
           Notification
         </Button>
       </div>
-      {/* <div className="contenet">
-        <DashBoardPage />
-      </div> */}
     </div>
   );
 };

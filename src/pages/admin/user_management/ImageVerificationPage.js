@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
+import ImageVerificationData from '../../../components/admin_components/user_management/imageverificationdata.js/ImageVerificationData';
 
 const ImageVerificationPage = () => {
   return (
@@ -12,8 +13,8 @@ const ImageVerificationPage = () => {
      <div className="left-side"> 
      <Sidebar/>
      </div>
-      <div className="content">
-         <h1>ImageVerificationPage content</h1>
+      <div className="side-content">
+         <ImageVerificationData/>
        </div>
     </div>
   </div>

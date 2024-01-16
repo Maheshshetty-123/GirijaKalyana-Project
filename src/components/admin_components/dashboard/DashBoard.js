@@ -1,10 +1,9 @@
-
 import React from "react";
 import { FaUsers } from "react-icons/fa";
 import { MdCurrencyRupee } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import './dashboard.scss'
+import "./dashboard.scss";
 
 function DashBoard() {
   const [data, setData] = useState([]);
@@ -71,14 +70,14 @@ function DashBoard() {
           <div className="left-div">
             <div className="heading-div">
               <h1>1</h1>
-              <p style={{ width: "110px" }}>Total Paid Users</p>
+              <p style={{ width: "90px" }}>Total Paid Users</p>
             </div>
             <div className="right-div">
               <FaUsers style={{ fontSize: "50px", color: "#ED7014" }} />
             </div>
           </div>
           <div className="view-all-div">
-            <Link>View All</Link>
+            <Link to="/admin/onlinetransaction">View All</Link>
           </div>
         </div>
         {/* Assistance Pending card */}
@@ -93,7 +92,7 @@ function DashBoard() {
             </div>
           </div>
           <div className="view-all-div">
-            <Link>View All</Link>
+            <Link to="/admin/assistencepending" >View All</Link>
           </div>
         </div>
         {/* Assistance Success card */}
@@ -108,7 +107,7 @@ function DashBoard() {
             </div>
           </div>
           <div className="view-all-div">
-            <Link>View All</Link>
+            <Link to="/admin/assistencesuccess" >View All</Link>
           </div>
         </div>
         {/* Paid User Receipts card */}
@@ -123,7 +122,7 @@ function DashBoard() {
             </div>
           </div>
           <div className="view-all-div">
-            <Link>View All</Link>
+            <Link to="/admin/onlinetransaction" >View All</Link>
           </div>
         </div>
         {/* Assistance Receipts card */}
@@ -138,7 +137,7 @@ function DashBoard() {
             </div>
           </div>
           <div className="view-all-div">
-            <Link>View All</Link>
+            <Link to="/admin/assistanceonlinetransaction" >View All</Link>
           </div>
         </div>
         {/* Renewal Receipts card */}
@@ -146,14 +145,14 @@ function DashBoard() {
           <div className="left-div">
             <div className="heading-div">
               <h1>6646.0</h1>
-              <p>Renewal Receipts</p>
+              <p style={{ width: "90px" }}>Renewal Receipts</p>
             </div>
             <div className="right-div">
               <MdCurrencyRupee style={{ fontSize: "50px", color: "#ED7014" }} />
             </div>
           </div>
           <div className="view-all-div">
-            <Link>View All</Link>
+            <Link to="/admin/onlinetransaction" >View All</Link>
           </div>
         </div>
         {/* Total Online Receipts card */}
@@ -169,7 +168,7 @@ function DashBoard() {
             </div>
           </div>
           <div className="view-all-div">
-            <Link>View All</Link>
+            <Link to="#">View All</Link>
           </div>
         </div>
       </div>
@@ -199,7 +198,6 @@ function DashBoard() {
                 </ul>
               ))}
             </div>
-            
           </div>
         </div>
 

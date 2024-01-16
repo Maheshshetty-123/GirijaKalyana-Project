@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
-import './usermanagement.scss'
+import UpGradeUserData from '../../../components/admin_components/user_management/upgradeuserdata/UpGradeUserData';
 
 const UpgradeUserPage = () => {
   return (
@@ -14,7 +14,7 @@ const UpgradeUserPage = () => {
        <Sidebar/>
        </div>
         <div className="side-content">
-           <h1>UpgradeUserPage content</h1>
+          <UpGradeUserData/>
          </div>
       </div>
     </div>

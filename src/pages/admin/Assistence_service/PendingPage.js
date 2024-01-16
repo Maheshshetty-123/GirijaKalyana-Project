@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
+import PendingData from '../../../components/admin_components/Assistenceservicedata/pendingdata/PendingData';
+import '../style/usermanagement.scss'
 
 const PendingPage = () => {
   return (
@@ -12,9 +14,8 @@ const PendingPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="content">
-           <h1>PendingPage content</h1>
-           {/* here we need to call content */}
+        <div className="side-content">
+          <PendingData/>
          </div>
       </div>
     </div>

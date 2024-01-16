@@ -30,7 +30,7 @@ const Header = () => {
     <>
       <div className="dashboard-main-div">
         <div className="dasboard-logo-div">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" onClick={()=>{navigate("/admin/dashboard");}}/>
         </div>
 
         <div className="dashboard-right-div">

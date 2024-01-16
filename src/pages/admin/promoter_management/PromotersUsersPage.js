@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
+import PromoCodeUserData from '../../../components/admin_components/promoter_management/promocodeuserdata/PromoCodeUserData';
+import PromotersUsersData from '../../../components/admin_components/promoter_management/promotersuserdata/PromotersUsersData';
 
 const PromotersUsersPage = () => {
   return (
@@ -12,8 +14,8 @@ const PromotersUsersPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="content">
-           <h1>PromotersUsersPage content</h1>
+        <div className="side-content">
+           <PromotersUsersData/>
          </div>
       </div>
     </div>

@@ -23,6 +23,7 @@
     "react-slick": "^0.29.0",
     "react-table": "^7.8.0",
     "sass": "^1.69.5",
+    "semantic-ui-react": "^2.1.5",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },

@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
+import ReceiptVoucherData from '../../../components/admin_components/receipts/receiptvoucher/ReceiptVoucherData';
 
 const ReceiptVoucherPage = () => {
   return (
@@ -12,8 +13,8 @@ const ReceiptVoucherPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="content">
-           <h1>ReceiptVoucherPage content...</h1>
+        <div className="side-content">
+         <ReceiptVoucherData/>
          </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
 import UserData from '../../../components/admin_components/user_management/userdata/UserData'
-import './usermanagement.scss'
+import '../style/usermanagement.scss'
 
 
 const UserPage = () => {

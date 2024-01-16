@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
+import PayToPromotersData from '../../../components/admin_components/promoter_management/paytopromotersdata/PayToPromotersData';
 
 const PayToPromotersPage = () => {
   return (
@@ -12,8 +13,8 @@ const PayToPromotersPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="content">
-           <h1>PayToPromotersPage content...</h1>
+        <div className="side-content">
+          <PayToPromotersData/>
          </div>
       </div>
     </div>
