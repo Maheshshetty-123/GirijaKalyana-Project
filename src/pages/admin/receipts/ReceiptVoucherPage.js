@@ -2,6 +2,7 @@ import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
 import ReceiptVoucherData from '../../../components/admin_components/receipts/receiptvoucher/ReceiptVoucherData';
+import './receipts.scss'
 
 const ReceiptVoucherPage = () => {
   return (
@@ -13,7 +14,7 @@ const ReceiptVoucherPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="side-content">
+        <div className="receipts-side-content">
          <ReceiptVoucherData/>
          </div>
       </div>

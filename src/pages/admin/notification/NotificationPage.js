@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
 import NotificationData from '../../../components/admin_components/notification/NotificationData';
-
+import './notification.scss'
 const NotificationPage = () => {
   return (
     <div className="main-admin-div">
@@ -13,7 +13,7 @@ const NotificationPage = () => {
      <div className="left-side"> 
      <Sidebar/>
      </div>
-      <div className="content">
+      <div className="notification-side-content">
          <NotificationData/>
        </div>
     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
 import ReceiptsReportsData from '../../../components/admin_components/reports/receiptsreports/ReceiptsReportsdata';
+import './reportspage.scss'
 
 const ReceiptsReportPage = () => {
   return (
@@ -13,7 +14,7 @@ const ReceiptsReportPage = () => {
      <div className="left-side"> 
      <Sidebar/>
      </div>
-      <div className="side-content">
+      <div className="reportspage-side-content">
          <ReceiptsReportsData/>
        </div>
     </div>

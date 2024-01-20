@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../user_management/userdata/userdata.scss";
+import "./receiptreport.scss";
 import axios from "axios";
 
 const ReceiptsReportsData = () => {
@@ -11,6 +11,7 @@ const ReceiptsReportsData = () => {
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
+  const [showActive,setShowActive]=useState(false)
 
   //Data fetching
   useEffect(() => {
@@ -58,9 +59,21 @@ const ReceiptsReportsData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-      <div className="user">
+      <div className="receipt-report-user">
         <div className="fist-head">
           <h4>Receipts</h4>
+        </div>
+        <br />
+        <div className='date-div'>
+         <table>          
+          <tr>
+            <td><label htmlFor="">From</label></td>
+            <td><input type="Date" placeholder='From Date'/></td>
+            <td><label htmlFor="">To</label></td>
+            <td><input type="Date" /></td>
+            <td> <button type='button'>Submit</button></td>
+          </tr>
+         </table>
         </div>
         <br />
         <div className="second-head">
@@ -81,29 +94,29 @@ const ReceiptsReportsData = () => {
           </div>
         </div>
         <br />
-        <div className="third-head">
-          <table className="table-div">
+        <div className="table-responsive third-head">
+          <table className="table table-div">
             <thead>
               <tr>
-                <th>ID</th>
-                <th style={{width:'300px'}}>Name</th>
+                <th>Date</th>
+                <th>Registration No</th>
                 <th>UserName</th>
-                <th>Email Id</th>
-                <th>City</th>
-                <th>Phone</th>
-                <th>Company</th>
+                <th>Bank Reference Number</th>
+                <th>Mode of Payment</th>
+                <th>Amount</th>
+                <th>Status</th>
               </tr>
             </thead>
             <tbody>
               {filterCurrentRowData.map((row, index) => (
                 <tr key={row.id}>
-                  <td>{row.id}</td>
-                  <td style={{ color: "#03a9f4" }}>{row.name}</td>
+                  <td>-</td>
+                  <td>-</td>
                   <td>{row.username}</td>
-                  <td>{row.email}</td>
-                  <td>{row.address.city}</td>
-                  <td>{row.phone}</td>
-                  <td>{row.company.name}</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>Rs. </td>
+                  <td className="receipt-report-status">{showActive? <span className="receipt-report-status-span"><p id="receipt-report-active-status"></p>Success</span>:<span className="receipt-report-status-span" ><p id="receipt-report-pending-status"></p>Pending</span>}</td>
                 </tr>
               ))}
             </tbody>

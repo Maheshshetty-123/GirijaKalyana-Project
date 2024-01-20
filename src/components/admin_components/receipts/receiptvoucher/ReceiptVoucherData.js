@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../../user_management/userdata/userdata.scss";
 import axios from "axios";
 import { FaUsers } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -61,7 +60,7 @@ const ReceiptVoucherData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-      <div className="user">
+      <div className="receipts-user">
         <div className="fist-head">
           <h4>Receipt Voucher</h4>
         </div>

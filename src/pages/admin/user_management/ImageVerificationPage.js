@@ -13,7 +13,7 @@ const ImageVerificationPage = () => {
      <div className="left-side"> 
      <Sidebar/>
      </div>
-      <div className="side-content">
+      <div className="usermanagement-side-content">
          <ImageVerificationData/>
        </div>
     </div>

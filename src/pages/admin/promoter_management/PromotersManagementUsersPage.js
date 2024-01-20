@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
-import PromoCodeUserData from '../../../components/admin_components/promoter_management/promocodeuserdata/PromoCodeUserData';
-import PromotersUsersData from '../../../components/admin_components/promoter_management/promotersuserdata/PromotersUsersData';
+import PromotersManagementUsersData from '../../../components/admin_components/promoter_management/promotersuserdata/PromotersManagementUsersData';
+import './promoter_managementpage.scss'
 
-const PromotersUsersPage = () => {
+const PromotersManagementUsersPage = () => {
   return (
     <div className="main-admin-div">
       <div className="head-div">
@@ -14,12 +14,12 @@ const PromotersUsersPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="side-content">
-           <PromotersUsersData/>
+        <div className="promotermanagement-side-content">
+           <PromotersManagementUsersData/>
          </div>
       </div>
     </div>
   )
 }
 
-export default PromotersUsersPage
+export default PromotersManagementUsersPage

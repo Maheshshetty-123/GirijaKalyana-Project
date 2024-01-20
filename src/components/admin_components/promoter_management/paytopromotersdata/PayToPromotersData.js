@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../user_management/userdata/userdata.scss";
+import "./paytopromoterdata.scss";
 import axios from "axios";
 
 const PayToPromotersData = () => {
@@ -58,76 +58,85 @@ const PayToPromotersData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-      <div className="user">
-        <div className="fist-head">
-          <h4>Pay To Promoters</h4>
+    <div className="paytopromoter-user">
+      <div className="fist-head">
+        <h4>Pay To Promoters</h4>
+      </div>
+      <br />
+      <div className="second-head">
+        <div className="rows-per-page">
+          <label>Show </label>
+          <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
+            <option value={5}>5</option>
+            <option value={10}>10</option>
+            <option value={15}>15</option>
+            <option value={20}>20</option>
+          </select>
+          <label>Entries</label>
         </div>
-        <br />
-        <div className="second-head">
-          <div className="rows-per-page">
-            <label>Show </label>
-            <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
-              <option value={5}>5</option>
-              <option value={10}>10</option>
-              <option value={15}>15</option>
-              <option value={20}>20</option>
-            </select>
-            <label>Entries</label>
-          </div>
 
-          <div className="search-div">
-            <label htmlFor="search" id="search-id">Search : </label>
-            <input type="text" id="search" onChange={searchhandle} placeholder="Search" autoComplete="off"/>
-          </div>
+        <div className="search-div">
+          <label htmlFor="search" id="search-id">
+            Search :
+          </label>
+          <input
+            type="text"
+            id="search"
+            onChange={searchhandle}
+            placeholder="Search"
+            autoComplete="off"
+          />
         </div>
-        <br />
-        <div className="third-head">
-          <table className="table-div">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th style={{width:'300px'}}>Name</th>
-                <th>UserName</th>
-                <th>Email Id</th>
-                <th>City</th>
-                <th>Phone</th>
-                <th>Company</th>
+      </div>
+      <br />
+      <div className="table-responsive third-head">
+        <table className="table table-div">
+          <thead>
+            <tr>
+              <th>Promoter Name</th>
+              <th>Promoter Code</th>
+              <th>Total Earnings</th>
+              <th>Paid</th>
+              <th>Payable</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {filterCurrentRowData.map((row, index) => (
+              <tr key={row.id}>
+                <td>{row.name}</td>
+                <td>-</td>
+                <td>Rs. </td>
+                <td>Rs. </td>
+                <td>Rs. </td>
+                <td className="paynow-div">
+                  <button>Pay Now</button>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {filterCurrentRowData.map((row, index) => (
-                <tr key={row.id}>
-                  <td>{row.id}</td>
-                  <td style={{ color: "#03a9f4" }}>{row.name}</td>
-                  <td>{row.username}</td>
-                  <td>{row.email}</td>
-                  <td>{row.address.city}</td>
-                  <td>{row.phone}</td>
-                  <td>{row.company.name}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="fourth-div">
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="fourth-div">
         <div className="pagination">
           <div>
-          <h5>
-          Showing {indexOfFirstRow + 1} to {indexOfLastRow} of {records.length}  Entries
-          </h5>
+            <h5>
+              Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
+              {records.length} Entries
+            </h5>
           </div>
           <div className="btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
-            </button>...
+            </button>
+            ...
             <button onClick={handlenext} disabled={currentPage === totalPages}>
               Next
             </button>
           </div>
         </div>
-        </div>
       </div>
-    
+    </div>
   );
 };
 

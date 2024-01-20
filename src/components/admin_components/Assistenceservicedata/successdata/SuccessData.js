@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../user_management/userdata/userdata.scss";
+import "./success.scss";
 import axios from "axios";
 
 const SuccessData = () => {
@@ -58,7 +58,7 @@ const SuccessData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-      <div className="user">
+      <div className="success-user">
         <div className="fist-head">
           {/* <h4></h4> */}
         </div>
@@ -81,8 +81,8 @@ const SuccessData = () => {
           </div>
         </div>
         <br />
-        <div className="third-head">
-          <table className="table-div">
+        <div className="table-responsive third-head">
+          <table className="table table-div">
             <thead>
               <tr>
               <th>Registration No</th>
@@ -96,10 +96,10 @@ const SuccessData = () => {
             <tbody>
               {filterCurrentRowData.map((row, index) => (
                 <tr key={row.id}>
-                  <td>{row.id}</td>
-                  <td style={{ color: "#03a9f4" }}>{row.name}</td>
-                  <td>{row.username}</td>
+                  <td>-</td>
+                  <td>{row.name}</td>
                   <td>{row.email}</td>
+                  <td>{row.phone}</td>
                   <td>Here Caste</td>
                   <td>free/silver User</td>
                 </tr>

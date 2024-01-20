@@ -27,6 +27,8 @@ import AboutUsPage from "../../pages/home/aboutus/AboutUsPage";
 import PrivacyPolicyPage from "../../pages/home/privacypolicy/PrivacyPolicyPage";
 import ContactUsPage from "../../pages/home/contactus/ContactUsPage";
 import ReceiptsReportPage from "../../pages/admin/reports/ReceiptsReportPage";
+import PromotersManagementUsersData from "../admin_components/promoter_management/promotersuserdata/PromotersManagementUsersData";
+import PromotersManagementUsersPage from "../../pages/admin/promoter_management/PromotersManagementUsersPage";
 
 const RoutingPage = () => {
   return (
@@ -65,7 +67,7 @@ const RoutingPage = () => {
 
             {/* promoters management pages navigation */}
             <Route path="promoters" element={<PromotersPage />} />
-            <Route path="promotersusers" element={<PromotersUsersPage />} />
+            <Route path="promocodeusers" element={<PromotersManagementUsersPage/>}/>
             <Route
               path="promotersearnings"
               element={<PromotersEarningsPage />}

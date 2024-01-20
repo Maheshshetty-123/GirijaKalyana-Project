@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../user_management/userdata/userdata.scss";
+import "./assistenceonlinetransactiondata.scss";
 import axios from "axios";
 
 const AssistanceOnlineTransactionData = () => {
@@ -11,6 +11,7 @@ const AssistanceOnlineTransactionData = () => {
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
+  const [showActive,setShowActive]=useState(false)
 
   //Data fetching
   useEffect(() => {
@@ -58,7 +59,7 @@ const AssistanceOnlineTransactionData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-      <div className="user">
+      <div className="assist-online-user">
         <div className="fist-head">
           <h4>Assistance Online Transaction</h4>
         </div>
@@ -81,29 +82,29 @@ const AssistanceOnlineTransactionData = () => {
           </div>
         </div>
         <br />
-        <div className="third-head">
-          <table className="table-div">
+        <div className="table-responsive third-head">
+          <table className="table table-div">
             <thead>
               <tr>
-                <th>ID</th>
-                <th style={{width:'300px'}}>Name</th>
+              <th>Date</th>
                 <th>UserName</th>
-                <th>Email Id</th>
-                <th>City</th>
-                <th>Phone</th>
-                <th>Company</th>
+                <th>Registration No</th>
+                <th>Bank Reference Number</th>
+                <th>Mode Of Payment</th>
+                <th>Amount</th>
+                <th>Status</th>
               </tr>
             </thead>
             <tbody>
               {filterCurrentRowData.map((row, index) => (
                 <tr key={row.id}>
-                  <td>{row.id}</td>
-                  <td style={{ color: "#03a9f4" }}>{row.name}</td>
-                  <td>{row.username}</td>
-                  <td>{row.email}</td>
-                  <td>{row.address.city}</td>
-                  <td>{row.phone}</td>
-                  <td>{row.company.name}</td>
+                  <td>-</td>
+                  <td >{row.username}</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>Rs. </td>
+                  <td className="asst-online-trans-status">{showActive? <span className="asst-online-status-span"><p id="asst-online-success-status"></p>TXN_Success</span>:<span className="asst-online-status-span" ><p id="asst-online-pending-status"></p>TXN_Pending</span>}</td>
                 </tr>
               ))}
             </tbody>

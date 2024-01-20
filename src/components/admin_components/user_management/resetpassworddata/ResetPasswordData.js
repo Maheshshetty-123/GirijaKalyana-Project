@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../userdata/userdata.scss";
+import "../resetpassworddata/resetpassworddata.scss";
 import axios from "axios";
 import { FaRegEdit } from "react-icons/fa";
 const ResetPasswordData = () => {
@@ -58,7 +58,7 @@ const ResetPasswordData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-      <div className="user">
+      <div className="reset-password-user">
         <div className="fist-head">
           <h4>Reset Password</h4>
         </div>
@@ -81,8 +81,8 @@ const ResetPasswordData = () => {
           </div>
         </div>
         <br />
-        <div className="third-head">
-          <table className="table-div">
+        <div className="table-responsive third-head">
+          <table className="table table-div">
             <thead>
               <tr>
               <th>Registration No</th>
@@ -96,12 +96,12 @@ const ResetPasswordData = () => {
             <tbody>
               {filterCurrentRowData.map((row, index) => (
                 <tr key={row.id}>
-                  <td>{row.id}</td>
-                  <td style={{ color: "#03a9f4" }}>{row.name}</td>
+                  <td>-</td>
+                  <td>{row.name}</td>
                   <td>{row.username}</td>
-                  <td>{row.address.city}</td>
-                  <td className="status">{showActive? <span className="status-span"><p className="active-status"></p>Active</span>:<span className="status-span" ><p className="pending-status"></p>Pending</span>}</td>
-                  <td className="reset-password"><button><FaRegEdit /> <br/>change password</button></td>
+                  <td>-</td>
+                  <td className="reset-password-status">{showActive? <span className="status-span"><p className="active-status"></p>Active</span>:<span className="status-span" ><p className="pending-status"></p>Pending</span>}</td>
+                  <td className="reset-password-btn"><button><FaRegEdit /> <br/>change password</button></td>
                 </tr>
               ))}
             </tbody>

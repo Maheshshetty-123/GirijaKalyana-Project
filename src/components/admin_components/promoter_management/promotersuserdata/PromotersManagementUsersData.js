@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../../user_management/userdata/userdata.scss";
+import "./promoteruserdata.scss";
 import axios from "axios";
 
-const PromotersUsersData = () => {
+const PromotersManagementUsersData = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [records, setRecords] = useState([]);
@@ -58,20 +58,47 @@ const PromotersUsersData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-    <div className="user">
+    <div className="promotersmanagement-user">
       <div className="fist-head">
         <h4>PromoterUsers</h4>
+        <select name="" id="" >
+            <option value="" selected>
+              All Users
+            </option>
+            <option value="">Premium Users</option>
+            <option value="">Silver Users</option>
+            <option value="">Free Users</option>
+          </select>
       </div>
       <br />
+      <div className="second-head">
+          <div className="rows-per-page">
+            <label>Show </label>
+            <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
+              <option value={5}>5</option>
+              <option value={10}>10</option>
+              <option value={15}>15</option>
+              <option value={20}>20</option>
+            </select>
+            <label>Entries</label>
+          </div>
+
+          <div className="search-div">
+            <label htmlFor="search" id="search-id">Search : </label>
+            <input type="text" id="search" onChange={searchhandle} placeholder="Search" autoComplete="off"/>
+          </div>
+        </div>
       <br />
-      <div className="third-head">
-        <table className="table-div">
+      <div className="table-responsive third-head">
+        <table className="table table-div">
           <thead>
             <tr>
               <th>promoters name</th>
               <th>Promocode</th>
               <th>Mobile</th>
-              <th>Assistance Users</th>
+              <th>Free Users</th>
+              <th>Premium Users</th>
+              <th>Silver Users</th>
               <th>Total Users</th>
               <th>Action</th>
             </tr>
@@ -79,11 +106,13 @@ const PromotersUsersData = () => {
           <tbody>
             {filterCurrentRowData.map((row, index) => (
               <tr key={row.id}>
-                <td>promoters name</td>
-                <td style={{ color: "#03a9f4" }}>Promocode Nos</td>
+                <td>{row.name}</td>
+                <td>-</td>
                 <td>{row.phone}</td>
-                <td>users Nos</td>
-                <td>users Nos</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
                 <td className="action-button">
                   <button id="action-btn">DETAILS</button>
                 </td>
@@ -115,4 +144,4 @@ const PromotersUsersData = () => {
   );
 };
 
-export default PromotersUsersData;
+export default PromotersManagementUsersData;

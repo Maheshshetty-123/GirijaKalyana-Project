@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
 import UserData from '../../../components/admin_components/user_management/userdata/UserData'
-import '../style/usermanagement.scss'
+import './usermanagementpagesidecontent.scss'
 
 
 const UserPage = () => {
@@ -15,7 +15,7 @@ const UserPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="side-content">
+        <div className="usermanagement-side-content" >
            <UserData/>
          </div>
       </div>

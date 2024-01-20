@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
 import PendingData from '../../../components/admin_components/Assistenceservicedata/pendingdata/PendingData';
-import '../style/usermanagement.scss'
+import './assistenceservice.scss'
 
 const PendingPage = () => {
   return (
@@ -14,7 +14,7 @@ const PendingPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="side-content">
+        <div className="assistenceservice-side-content">
           <PendingData/>
          </div>
       </div>

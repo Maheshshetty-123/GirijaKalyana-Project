@@ -1,0 +1,9 @@
+.main-admin-div {
+    .div1 {
+      overflow: hidden;
+      .assistenceservice-side-content {
+        width: calc(100% - 255px);
+        margin-left: 26%;
+      }
+    }
+  }

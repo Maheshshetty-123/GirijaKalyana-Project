@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "../../user_management/userdata/userdata.scss";
+import "./promoterdata.scss";
+import { FaCheck } from "react-icons/fa6";
+import { MdDelete } from "react-icons/md";
 import axios from "axios";
 
 const PromotersData = () => {
@@ -11,7 +13,7 @@ const PromotersData = () => {
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
-
+  const [showActive,setShowActive]=useState(false)
   //Data fetching
   useEffect(() => {
     const fetchData = async () => {
@@ -58,7 +60,7 @@ const PromotersData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-    <div className="user">
+    <div className="promoterdata-user">
       <div className="fist-head">
         <h4>Promoters</h4>
         <select name="" id="">
@@ -71,11 +73,11 @@ const PromotersData = () => {
         </select>
       </div>
       <br />
-      <div>
-        <input type="radio" id=""/><label htmlFor="">All</label>
-        <input type="radio" id=""/><label htmlFor="">Active</label>
-        <input type="radio" id=""/><label htmlFor="">Inactive</label>
-        <input type="radio" id=""/><label htmlFor="">Pending</label>
+      <div className="radio-input-div">
+        <input type="radio" id="all" name="select-one" required/>All
+        <input type="radio" id="active" name="select-one"/>Active
+        <input type="radio" id="inactive" name="select-one"/>Inactive
+        <input type="radio" id="Pending" name="select-one"/>Pending
       </div>
       <div className="second-head">
         <div className="rows-per-page">
@@ -103,30 +105,30 @@ const PromotersData = () => {
         </div>
       </div>
       <br />
-      <div className="third-head">
-        <table className="table-div">
+      <div className="table-responsive third-head">
+        <table className=" table table-div">
           <thead>
             <tr>
-              <th>ID</th>
-              <th style={{ width: "300px" }}>Name</th>
-              <th>UserName</th>
+              <th>Promoter Name</th>
+              <th >Promoter Code</th>
+              <th>Mobile</th>
               <th>Email Id</th>
-              <th>City</th>
-              <th>Phone</th>
-              <th>Company</th>
+              <th>Promoter Type</th>
+              <th>Status</th>
+              <th>Change Status</th>
             </tr>
           </thead>
           <tbody>
             {filterCurrentRowData.map((row, index) => (
               <tr key={row.id}>
-                <td>{row.id}</td>
-                <td style={{ color: "#03a9f4" }}>{row.name}</td>
-                <td>{row.username}</td>
-                <td>{row.email}</td>
-                <td>{row.address.city}</td>
+                <td>{row.name}</td>
+                <td>-</td>
                 <td>{row.phone}</td>
-                <td>{row.company.name}</td>
-              </tr>
+                <td>{row.email}</td>
+                <td>-</td>
+                <td className="promoter-status">{showActive? <span className="promoter-status-span"><p id="active-status"></p>Active</span>:<span className="promoter-status-span" ><p id="pending-status"></p>Pending</span>}</td>
+                  <td className="promoter-status-change-btn">{showActive? <button className="promoter-pending-status-btn"><MdDelete /> <br />INACTIVE</button>:<button className="promoter-active-status-btn"><FaCheck/> <br />ACTIVE</button>}</td>
+                </tr>
             ))}
           </tbody>
         </table>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../userdata/userdata.scss";
+import "../imageverificationdata.js/imageverificationdata.scss";
 import axios from "axios";
 
 const ImageVerificationData = () => {
@@ -58,7 +58,7 @@ const ImageVerificationData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-      <div className="user">
+      <div className="imageverification-user">
         <div className="fist-head">
           <h4>Pending Image Verification</h4>
         </div>
@@ -81,8 +81,8 @@ const ImageVerificationData = () => {
           </div>
         </div>
         <br />
-        <div className="third-head">
-          <table className="table-div">
+        <div className="table-responsive third-head">
+          <table className="table table-div">
             <thead>
               <tr>
               <th>Registration No</th>
@@ -98,14 +98,14 @@ const ImageVerificationData = () => {
             <tbody>
               {filterCurrentRowData.map((row, index) => (
                 <tr key={row.id}>
-                  <td>{row.id}</td>
-                  <td style={{ color: "#03a9f4" }}>{row.name}</td>
-                  <td>{row.username}</td>
+                  <td>-</td>
+                  <td>{row.name}</td>
                   <td>{row.email}</td>
-                  <td>{row.address.city}</td>
+                  <td>M/F</td>
+                  <td>-</td>
                   <td>Upload</td>
                   <td>NA</td>
-                  <td className="status">{showActive? <span className="status-span"><p className="active-status"></p>Active</span>:<span className="status-span" ><p className="pending-status"></p>Pending</span>}</td>
+                  <td className="imageverification-status">{showActive? <span className="status-span"><p id="active-status"></p>Active</span>:<span className="status-span" ><p id="pending-status"></p>Pending</span>}</td>
                 </tr>
               ))}
             </tbody>

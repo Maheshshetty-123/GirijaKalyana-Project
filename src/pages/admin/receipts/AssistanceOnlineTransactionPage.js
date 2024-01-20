@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
 import AssistanceOnlineTransactionData from '../../../components/admin_components/receipts/assistanceonlinetransaction/AssistanceOnlineTransactionData';
-
+import './receipts.scss'
 const AssistanceOnlineTransactionPage = () => {
   return (
     <div className="main-admin-div">
@@ -13,7 +13,7 @@ const AssistanceOnlineTransactionPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="side-content">
+        <div className="receipts-side-content">
           <AssistanceOnlineTransactionData/>
          </div>
       </div>

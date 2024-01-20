@@ -10,6 +10,7 @@ import { FaEnvelope } from "react-icons/fa6";
 import { IoIosNotifications } from "react-icons/io";
 import profile from "../../../images/adminprofile.JPG";
 import { Link, useNavigate } from "react-router-dom";
+import Modal from "react-bootstrap/Modal";
 import "./sidebar.scss";
 
 const Sidebar = () => {
@@ -18,6 +19,10 @@ const Sidebar = () => {
     section2: false,
     section3: false,
   });
+  
+  const [showprofile, setShowProfile] = useState(false);
+  const handleCloseProfile = () => setShowProfile(false);
+  const handleShowProfile = () => setShowProfile(true);
 
   const handleToggle = (section) => {
     setOpenSections((prevOpenSections) => ({
@@ -37,7 +42,8 @@ const Sidebar = () => {
  
 
   return (
-    <div className="multi-button-dashboard">
+    <>
+      <div className="multi-button-dashboard">
       <div className="sidebar">
         <div className="profile-div">
           <img
@@ -51,7 +57,7 @@ const Sidebar = () => {
             }}
           />
           <h6>Admin123@gmail.com</h6>
-          <Link id="edit">Edit Profile</Link>
+          <Link id="edit" onClick={handleShowProfile}>Edit Profile</Link>
         </div>
 
         <Button className="btn-dash" onClick={showdashboardpage}>
@@ -136,7 +142,7 @@ const Sidebar = () => {
           <div>
             <Nav className="flex-column">
               <Link to="/admin/promoters">Promoters</Link>
-              <Link to="/admin/promotersusers">Promoters Users</Link>
+              <Link to="/admin/promocodeusers">Promoters Users</Link>
               <Link to="/admin/promotersearnings">Promoters Earning</Link>
               <Link to="/admin/paytopromoters">Pay to Promoters</Link>
             </Nav>
@@ -212,6 +218,40 @@ const Sidebar = () => {
         </Button>
       </div>
     </div>
+
+    
+      {/* pop for profile */}
+
+      <Modal
+        show={showprofile}
+        onHide={handleCloseProfile}
+        className="main-div-popup"
+      >
+        <Modal.Header closeButton className="popup-head">
+          <Modal.Title className="popup-tittle">
+            Change Profile Image
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="popup-body">
+          <div className="profile-div">
+            <div>
+              <img src={profile} alt="" />
+            </div>
+            <div className="file-div">
+              <input type="file" />
+              <div id="btn-div">
+                <Button id="submit-btn" onClick={handleCloseProfile}>
+                  SUBMIT
+                </Button>
+                <Button id="close-btn" onClick={handleCloseProfile}>
+                  CLOSE
+                </Button>
+              </div>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
+    </>
   );
 };
 

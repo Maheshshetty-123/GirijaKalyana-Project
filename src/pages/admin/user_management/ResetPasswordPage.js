@@ -13,7 +13,7 @@ const ResetPasswordPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="side-content">
+        <div className="usermanagement-side-content">
           <ResetPasswordData/>
          </div>
       </div>

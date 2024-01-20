@@ -2,6 +2,7 @@ import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
 import PromotersData from '../../../components/admin_components/promoter_management/promotersdata/PromotersData';
+import './promoter_managementpage.scss'
 
 const PromotersPage = () => {
   return (
@@ -13,7 +14,7 @@ const PromotersPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="side-content">
+        <div className="promotermanagement-side-content">
            <PromotersData/>
          </div>
       </div>

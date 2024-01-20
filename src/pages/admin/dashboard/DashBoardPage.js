@@ -14,7 +14,7 @@ const DashBoardPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="content">
+        <div className="dashboard-content">
            <DashBoard/> 
          </div>
       </div>

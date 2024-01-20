@@ -1,0 +1,118 @@
+.promoter-user {
+  padding: 10px;
+
+  .fist-head {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #beb7b7;
+    padding-bottom: 10px;
+
+    h4 {
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  }
+}
+
+.second-head {
+  display: flex;
+  align-items: center;
+  .rows-per-page {
+    margin-left: 5px;
+    label {
+      padding: 0 10px;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    select {
+      padding: 5px;
+      border-radius: 5px;
+      width: 60px;
+      border: none;
+      outline: none;
+    }
+  }
+  .search-div {
+    margin-left: 200px;
+
+    #search-id {
+      font-size: 1.1em;
+      margin-right: 10px;
+    }
+    input {
+      border: none;
+      outline: none;
+      height: 40px;
+      border-radius: 5px;
+      padding-left: 10px;
+    }
+  }
+}
+.third-head {
+  .table-div {
+    thead {
+      tr {
+        th {
+          padding: 10px 20px;
+          border-bottom: 1px solid #beb7b7;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 10px 20px;
+          border-bottom: 1px solid #beb7b7;
+          color: #6e6a6a;
+        }
+        .promoter-action-btn {
+          #act-btn {
+            color: #ed7014;
+            background-color: transparent;
+            border:1px solid #ed7014;
+            font-size: 11px;
+            width: 80px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            &:hover {
+              transition: all 0.5s;
+              background-color: #ed7014;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.fourth-div {
+  margin-top: 20px;
+  .pagination {
+    div {
+      padding-left: 10px;
+      padding-right: 100px;
+      display: flex;
+      align-items: center;
+      h5 {
+        padding: 5px;
+        font-size: 1em;
+      }
+    }
+    .btn-div {
+      button {
+        padding: 7px 30px;
+        margin: 5px 10px;
+        background-color: rgb(244, 182, 13);
+        outline: none;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+}

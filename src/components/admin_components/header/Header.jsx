@@ -6,35 +6,68 @@ import { useNavigate } from "react-router-dom";
 import { IoIosSettings } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { FiLogOut } from "react-icons/fi";
-import Noty from "../dashboard/Noty";
+import { IoIosNotifications } from "react-icons/io";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
-// import { FaUser } from "react-icons/fa";
-import './header.scss'
+import "./header.scss";
 
 const Header = () => {
-  const navigate = useNavigate();
-
   const [showsetting, setShowSetting] = useState(false);
   const [showprofile, setShowProfile] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
 
+  const navigate = useNavigate();
   const handleCloseSetting = () => setShowSetting(false);
   const handleShowSetting = () => setShowSetting(true);
 
   const handleCloseProfile = () => setShowProfile(false);
   const handleShowProfile = () => setShowProfile(true);
 
+  const shownotification = () => {
+    setShowNotification((prev) => !prev);
+  };
+
   return (
     <>
       <div className="dashboard-main-div">
         <div className="dasboard-logo-div">
-          <img src={logo} alt="logo" onClick={()=>{navigate("/admin/dashboard");}}/>
+          <img
+            src={logo}
+            alt="logo"
+            onClick={() => {
+              navigate("/admin/dashboard");
+            }}
+          />
         </div>
 
         <div className="dashboard-right-div">
-          <Noty width={"30px"} color={"#122C34"} count={10} />
+          <div className="notification-div">
+            <span>
+              <IoIosNotifications
+                style={{ color: "black", fontSize: "25px", zIndex: "3" }}
+                onClick={shownotification}
+              />
+            </span>
+            <p id="show-count" onClick={shownotification}>
+              10
+            </p>
+          </div>
+          {showNotification ? (
+            <div className="notification-disp">
+              <p
+                id="show"
+                onClick={() => {
+                  navigate("/admin/imageverification");
+                }}
+              >
+                notification
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
           <div>
             <Dropdown>
               <Dropdown.Toggle
@@ -133,7 +166,7 @@ const Header = () => {
             </div>
             <div className="file-div">
               <input type="file" />
-              <div>
+              <div id="btn-div">
                 <Button id="submit-btn" onClick={handleCloseProfile}>
                   SUBMIT
                 </Button>

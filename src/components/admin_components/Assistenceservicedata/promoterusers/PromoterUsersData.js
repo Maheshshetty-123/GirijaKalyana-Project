@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../user_management/userdata/userdata.scss";
+import "./promoteruser.scss";
 import axios from "axios";
 
 const PromotersUsersData = () => {
@@ -58,7 +58,7 @@ const PromotersUsersData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-    <div className="user">
+    <div className="promoter-user">
       <div className="fist-head">
         <h4>Promoter Users</h4>
       </div>
@@ -89,8 +89,8 @@ const PromotersUsersData = () => {
         </div>
       </div>
       <br />
-      <div className="third-head">
-        <table className="table-div">
+      <div className="table-responsive third-head">
+        <table className="table table-div">
           <thead>
             <tr>
               <th>Promoter Name</th>
@@ -104,13 +104,12 @@ const PromotersUsersData = () => {
           <tbody>
             {filterCurrentRowData.map((row, index) => (
               <tr key={row.id}>
-                <td>{row.id}</td>
                 <td>{row.name}</td>
-                <td>{row.username}</td>
-                <td>{row.email}</td>
-                <td>{row.address.city}</td>
+                <td>-</td>
                 <td>{row.phone}</td>
-                <td>{row.company.name}</td>
+                <td>-</td>
+                <td>-</td>
+                <td className="promoter-action-btn"><button id="act-btn">details</button></td>
               </tr>
             ))}
           </tbody>

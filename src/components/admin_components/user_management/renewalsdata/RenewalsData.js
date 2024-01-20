@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../userdata/userdata.scss";
+import '../renewalsdata/renewal.scss'
 import axios from "axios";
 
 const RenewalsData = () => {
@@ -11,6 +11,7 @@ const RenewalsData = () => {
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
+  const [showActive, setShowActive] = useState(false);
 
   //Data fetching
   useEffect(() => {
@@ -58,7 +59,7 @@ const RenewalsData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-      <div className="user">
+      <div className="renewal-user">
         <div className="fist-head">
           <h4>Renewals</h4>
           </div>
@@ -81,8 +82,8 @@ const RenewalsData = () => {
           </div>
         </div>
         <br />
-        <div className="third-head">
-          <table className="table-div">
+        <div class="table-responsive third-head">
+          <table className="table table-div">
             <thead>
               <tr>
               <th>Registration No</th>
@@ -97,13 +98,23 @@ const RenewalsData = () => {
             <tbody>
               {filterCurrentRowData.map((row, index) => (
                 <tr key={row.id}>
-                  <td>{row.id}</td>
-                  <td style={{ color: "#03a9f4" }}>{row.name}</td>
-                  <td>{row.username}</td>
+                  <td>-</td>
+                  <td>{row.name}</td>
                   <td>{row.email}</td>
-                  <td>{row.address.city}</td>
-                  <td>{row.phone}</td>
-                  <td>{row.company.name}</td>
+                  <td>M/F</td>
+                  <td>-</td>
+                  <td className="renewal-status">
+                  {showActive ? (
+                    <span className="status-span">
+                      <p id="active-status"></p>Active
+                    </span>
+                  ) : (
+                    <span className="status-span">
+                      <p id="pending-status"></p>Pending
+                    </span>
+                  )}
+                </td>
+                <td>-</td>
                 </tr>
               ))}
             </tbody>

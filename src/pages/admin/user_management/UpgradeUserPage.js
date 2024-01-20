@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
 import UpGradeUserData from '../../../components/admin_components/user_management/upgradeuserdata/UpGradeUserData';
-
+import './usermanagementpagesidecontent.scss'
 const UpgradeUserPage = () => {
   return (
     <div className="main-admin-div">
@@ -13,7 +13,7 @@ const UpgradeUserPage = () => {
        <div className="left-side"> 
        <Sidebar/>
        </div>
-        <div className="side-content">
+        <div className="usermanagement-side-content">
           <UpGradeUserData/>
          </div>
       </div>
